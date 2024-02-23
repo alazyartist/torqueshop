@@ -28,7 +28,6 @@ function BuyNowButton({ product }: { product: Product }) {
       }
     }
   }, [color, size]);
-  console.log(currentVariant);
   return (
     <ShopifyProvider
       storeDomain="https://45bb3b-e1.myshopify.com"
