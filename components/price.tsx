@@ -41,7 +41,6 @@ const Price = ({
         setCurrentPrice(newPrice);
       }
     }
-    console.log(currentPrice);
   }, [color, size]);
 
   return (
