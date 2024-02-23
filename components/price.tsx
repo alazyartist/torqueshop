@@ -13,7 +13,7 @@ const Price = ({
   currencyCodeClassName
 }: {
   amount: string;
-  product: Product;
+  product?: Product;
   className?: string;
   currencyCode: string;
   currencyCodeClassName?: string;
@@ -23,8 +23,7 @@ const Price = ({
   const size = query?.get('size');
   const [currentPrice, setCurrentPrice] = useState(amount);
   useEffect(() => {
-    console.log('color', color);
-    console.log('size', size);
+    if (!product) return;
     if (!color && size) {
       const newPrice = product?.variants.find((v) => v.selectedOptions[0]?.value === size)?.price
         .amount;
